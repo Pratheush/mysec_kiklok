@@ -1,0 +1,14 @@
+#server:
+#  port: 9171
+
+#spring:
+#  application:
+#    name: service-registry
+
+
+#eureka:
+#  client:
+#    register-with-eureka: false
+#    fetch-registery: false
+
+

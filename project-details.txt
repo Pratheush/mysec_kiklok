@@ -1,0 +1,92 @@
+Application	Port
+Spring Cloud Config Server	9141
+order-Service	9191, 
+payment Service	9181
+service-registry	8761
+API Gateway Server	9161
+Zipkin Distributed Tracing Server	9151
+
+
+
+curl -X POST --header "Content-Type: application/json" -d '{"order":{"id": 1, "name":"Mobile","qty":1,"price":8000},"payment":{}}' http://localhost:9191/order/bookOrder
+
+Eureka	http://localhost:8761/
+
+h2
+payment ::: http://localhost:9181/h2-console/login.do?jsessionid=5f348cfcee6fb0795c5a87120c625f5e
+order ::: http://localhost:9191/h2-console/login.do?jsessionid=ab2a56f39e3d7badc1b0fc4c1fc20f76
+
+using api-gateway::
+curl -X POST --header "Content-Type: application/json" -d '{"order":{"id": 1, "name":"Mobile","qty":1,"price":8000},"payment":{}}' http://localhost:9161/order/bookOrder
+curl http://localhost:9161/payment/1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
